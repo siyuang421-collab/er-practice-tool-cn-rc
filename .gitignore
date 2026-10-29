@@ -1,0 +1,10 @@
+# Build artifacts and release zips are uploaded via GitHub Releases, not committed.
+releases/*.zip
+releases/*.exe
+releases/*.dll
+
+# OS / editor junk
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
