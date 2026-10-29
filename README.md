@@ -11,7 +11,7 @@
 
 ## 下载
 
-去 [Releases](https://github.com/1siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `er-practice-tool-cn-vX.X.X.zip`，解压后按下面步骤跑。
+去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `er-practice-tool-cn-vX.X.X.zip`，解压后按下面步骤跑。
 
 ## 前置要求
 
