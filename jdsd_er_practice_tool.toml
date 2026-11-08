@@ -1,0 +1,92 @@
+commands = [
+  { savefile_manager = "ctrl+o" },
+  { item_spawner = "ctrl+u" },
+  { character_stats = true },
+  { warp = true },
+  { cycle_speed = [0.5, 1.0, 2.0, 5.0, 10.0], hotkey = "8" },
+  { runes = 10000, hotkey = "9" },
+  { group = "位置调整", commands = [
+    { nudge = 1.0, nudge_up = "[", nudge_down = "]" },
+    { position = "h", save = "rshift+h" },
+    { position = "j", save = "rshift+j" },
+    { position = "k", save = "rshift+k" },
+  ]},
+  { group = "绘制开关", commands = [
+    { cycle_color = [0, 1, 2, 3, 4, 5] },
+    { flag = "show_map", hotkey = "f4" },
+    { flag = "show_chr", hotkey = "f5" },
+    { flag = "display_stable_pos", hotkey = "f6" },
+    { flag = "hitbox_high", hotkey = "f7" },
+    { flag = "hitbox_low", hotkey = "f8" },
+    { flag = "hitbox_f" },
+    { flag = "hitbox_character" },
+    { flag = "hitbox_event" },
+    { flags = ["weapon_hitbox1", "weapon_hitbox2", "weapon_hitbox3"], hotkey = "f9", label = "武器判定" },
+    { flag = "poise_view" },
+    { flag = "all_targeting_view" },
+    { flag = "sound_view" },
+  ]},
+
+  { flag = "no_damage", hotkey = "1" },
+  { flags = ["no_fp_consume", "no_ashes_of_war_fp_consume"], hotkey = "2", label = "专注不消耗" },
+  { flag = "no_stamina_consume", hotkey = "3" },
+  { flags = ["no_goods_consume", "no_arrows_consume"], hotkey = "4", label = "道具不消耗" },
+  { flag = "deathcam", hotkey = "5" },
+  { flag = "no_dead", hotkey = "6" },
+  { flag = "one_shot", hotkey = "7" },
+  { flag = "runearc", hotkey = "o" },
+  { target = "ctrl+n" },
+  { input_viewer = false, seconds = 5 },
+  { flags = ["field_area_direction", "field_area_altimeter" , "field_area_compass"], label = "区域 HUD" },
+  { flag = "no_update_ai", hotkey = "f1" },
+  { flag = "no_trigger_event" },
+  { flag = "gravity", hotkey = "f2" },
+  { flag = "torrent_gravity", hotkey = "f2" },
+  { flags = ["collision", "torrent_collision"], label = "穿墙" },
+  { flag = "action_freeze", hotkey = "ctrl+l" },
+  { flags = ["show_all_map_layers", "show_all_graces"], hotkey = "f3", label="显示全部赐福/地标" },
+
+  { quitout = "p" },
+]
+
+radial-menu = [
+  { key = "p", label = "退出重进" },
+  { key = "h", label = "读取位置" },
+  { key = "ctrl+o", label = "读取存档" },
+  { key = "f1", label = "AI 静止" },
+  { key = "1", label = "无敌" },
+  { key = "ctrl+n", label = "目标信息" },
+  { key = "rshift+h", label = "保存位置" },
+]
+
+[settings]
+log_level = "INFO"
+display = "0"
+hide = "rshift+0"
+dxgi_debug = false
+show_console = false
+disable_update_prompt = false
+radial_menu_open = "l3+r3"
+indicators = [
+  { indicator = "game_version", enabled = true },
+  { indicator = "igt", enabled = true },
+  { indicator = "position", enabled = false },
+  { indicator = "position_change", enabled = false },
+  { indicator = "position_distance", enabled = false },
+  { indicator = "animation", enabled = false },
+  { indicator = "fps", enabled = false },
+  { indicator = "framecount", enabled = false },
+  { indicator = "imgui_debug", enabled = false }
+]
+theme = "原版蓝色"
+ui_scale = "标准"
+
+# 输入框反向映射表：仅在使用键盘映射工具（如 QKeyMapper）时为工具界面
+# 还原被改写的按键，不影响游戏内的映射。方向与映射工具一致：左边写
+# 你按下的原始键，右边写映射工具发给游戏的键。例：QKeyMapper 里 B→T，
+# 写 `"B" = "T"`，工具输入框里按 B 会直接输入 b（游戏中仍映射为 T）。
+# 一般无需手改此处，主界面「键盘映射」按钮会读写 DLL 旁的
+# kb-reverse-map.toml（覆盖此处的同名键）。支持字母、数字及 Esc 等功能键：
+# [keyboard-reverse-map]
+# "B" = "T"
+# "T" = "Esc"
