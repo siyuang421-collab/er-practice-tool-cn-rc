@@ -78,7 +78,7 @@ indicators = [
   { indicator = "framecount", enabled = false },
   { indicator = "imgui_debug", enabled = false }
 ]
-theme = "原版蓝色"
+theme = "蓝色"
 ui_scale = "标准"
 
 # 输入框反向映射表：仅在使用键盘映射工具（如 QKeyMapper）时为工具界面
