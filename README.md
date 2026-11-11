@@ -95,6 +95,10 @@ WINEDLLOVERRIDES="dinput8=n,b" %command%
 - **检测框默认范围**：世界碰撞检测框（高/低）默认 8 / 55 米；`hitbox_range.txt` 第 3 行 `0` = 不限块数，第 4 行 `1.0` = 迟滞。改完保存，游戏内约 1 秒生效，不用重启。
 - **默认界面主题**：压缩包里的配置文件默认「原版蓝色」，新解压的用户第一次打开就是蓝色界面。
 - **文案统一**：「无重力 (Torrent)」「穿墙 (Torrent)」改为「无重力 (灵马)」「穿墙 (灵马)」。
+- **人物血量锁定（新增）**：主界面「人物血量」按钮，填好锁定值后勾选，掉血会在 1~2 毫秒内补回（只往下补，喝药/升级/重生回满不会被压回去）；关闭弹窗不会解除锁定，取消勾选后，死亡重生或过图读档会自动补满到血量上限。
+- **卢恩改为自定义数量（新增）**：主界面「增加卢恩」按钮，弹窗里填数量（默认 10000）再点「增加 N」；不再占用快捷键 9，配置从 `{ runes = 10000, hotkey = "9" }` 简化为 `{ runes = true }`，旧配置照常加载。
+- **点工具界面不再误触游戏**：点按钮、滚轮不再漏进游戏（不会误攻击/翻滚/举盾/切武器）。
+- **检测框绘制优化**：超大块地形与慢块自动跳过、每帧 8 ms 绘制预算，瞄准时不至于把帧率拖垮；每 5 秒记录一条统计（判定/放行/绘制耗时/FPS/画过的块）。
 - 其余功能与 v1.11.1 一致。
 
 ### v1.11.1（2026-11-09）
@@ -116,7 +120,7 @@ WINEDLLOVERRIDES="dinput8=n,b" %command%
 
 ## 致谢
 
-- 原作者 [johndisandonato (veeenu)](https://github.com/veeenu) 与 late Aura Ackermann。
+- 原作者 [johndisandonato (veeenu)](https://github.com/veeenu) 与 修改者 late Aura Ackermann。
 - ViRazY 完成 Linux 支持。
 - Soulsmodding 社区提供 Param 定义与 CE 表。
 - UI 字体 [Comic Mono](https://github.com/dtinth/comic-mono-font)。
