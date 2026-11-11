@@ -2,6 +2,27 @@
 
 本文件记录中文版相对上游 [veeenu/eldenring-practice-tool](https://github.com/veeenu/eldenring-practice-tool) 的改动。
 
+## v1.12.0（2026-11-11 正式版）
+
+### 版本号与更新检查
+- 版本号升到 1.12.0，发布包名同步改为 `jdsd_er_practice_tool-v1.12.0.zip`。
+- 更新检查从上游 `veeenu/eldenring-practice-tool` 改为本仓库 `siyuang421-collab/er-practice-tool-cn-rc`：启动时读取 latest release 的 tag，与本机版本比较，更高时在齿轮页亮绿色「更新」按钮，点开可看更新说明并跳转下载页。
+- 提示弹窗改为中文；tag 同时兼容 `1.12.0` 与 `v1.12.0` 两种写法；仓库尚无 Release（接口 404）时按「已是最新」处理，不会亮红报错，只有断网或请求失败才提示检查失败。
+
+### 检测框范围
+- 世界碰撞检测框（高/低）默认范围改为 8 / 55 米，`hitbox_range.txt` 第 3 行 `0`（不限块数）、第 4 行 `1.0`（迟滞）；改完保存约 1 秒内生效，无需重启游戏。
+- 保留：超大块跳过、慢块跳过、每帧 8 ms 绘制预算、每 5 秒统计日志（判定/放行/绘制耗时/包围盒耗时/FPS/画过的块清单）。
+
+### 界面与文案
+- 压缩包内的 `jdsd_er_practice_tool.toml` 默认主题改为「原版蓝色」，新用户第一次打开即蓝色界面；已有配置不会被覆盖。
+- 「无重力 (Torrent)」「穿墙 (Torrent)」统一为「无重力 (灵马)」「穿墙 (灵马)」。
+- `版本与改动使用说明.txt` 同步到 v1.12.0（UTF-8 带 BOM，Windows 记事本打开不乱码）。
+
+### 打包
+- 发布包固定 5 个文件：`dinput8.dll`、`jdsd_er_practice_tool.exe`、`jdsd_er_practice_tool.toml`、`版本与改动使用说明.txt`、`hitbox_range.txt`。
+- Release 附件名使用英文 `jdsd_er_practice_tool-vX.X.X.zip`（GitHub 会截断附件名里的中文）。
+
+
 ## v1.11.1（2026-11-09 正式版）
 
 ### 生成物品界面缺字修复（"?"问题）
