@@ -2,9 +2,10 @@ commands = [
   { savefile_manager = "ctrl+o" },
   { item_spawner = "ctrl+u" },
   { character_stats = true },
+  { hp_lock = true },
   { warp = true },
   { cycle_speed = [0.5, 1.0, 2.0, 5.0, 10.0], hotkey = "8" },
-  { runes = 10000, hotkey = "9" },
+  { runes = true },
   { group = "位置调整", commands = [
     { nudge = 1.0, nudge_up = "[", nudge_down = "]" },
     { position = "h", save = "rshift+h" },
@@ -78,7 +79,7 @@ indicators = [
   { indicator = "framecount", enabled = false },
   { indicator = "imgui_debug", enabled = false }
 ]
-theme = "蓝色"
+theme = "原版蓝色"
 ui_scale = "标准"
 
 # 输入框反向映射表：仅在使用键盘映射工具（如 QKeyMapper）时为工具界面
