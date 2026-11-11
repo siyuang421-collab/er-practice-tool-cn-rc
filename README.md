@@ -11,7 +11,7 @@
 
 ## 下载
 
-去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `er-practice-tool-cn-vX.X.X.zip`，解压后按下面步骤跑。
+去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.12.0.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
 
 ## 前置要求
 
@@ -88,7 +88,14 @@ WINEDLLOVERRIDES="dinput8=n,b" %command%
 
 ---
 
-## 中文版本次更新（v1.11.1）
+## 中文版本次更新（v1.12.0）
+
+### v1.12.0（2026-11-11）
+- **更新检查接回本仓库**：工具启动时读取本仓库的 latest release，与本机版本比较；有更新时齿轮页亮绿色「更新」按钮，可看更新说明、跳转下载页。原来指向的是上游仓库，现已改为 `siyuang421-collab/er-practice-tool-cn-rc`。
+- **检测框默认范围**：世界碰撞检测框（高/低）默认 8 / 55 米；`hitbox_range.txt` 第 3 行 `0` = 不限块数，第 4 行 `1.0` = 迟滞。改完保存，游戏内约 1 秒生效，不用重启。
+- **默认界面主题**：压缩包里的配置文件默认「原版蓝色」，新解压的用户第一次打开就是蓝色界面。
+- **文案统一**：「无重力 (Torrent)」「穿墙 (Torrent)」改为「无重力 (灵马)」「穿墙 (灵马)」。
+- 其余功能与 v1.11.1 一致。
 
 ### v1.11.1（2026-11-09）
 - **物品界面缺字修复**：修复"抗魔肝脏干""太刀""软鞭""连枷"等物品名显示为"?"的问题；按白名单完整展开重新生成字体子集，6,650 条物品名全部正常显示。
