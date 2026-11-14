@@ -28,6 +28,13 @@ commands = [
     { flag = "sound_view" },
   ]},
 
+  { group = "世界控制", commands = [
+    { combat_map = true },
+    { dungeon_warp = true },
+    { freeze_world = true },
+    { game_speed = [0.5, 1.0, 1.5, 2.0, 3.0] },
+  ]},
+
   { flag = "no_damage", hotkey = "1" },
   { flags = ["no_fp_consume", "no_ashes_of_war_fp_consume"], hotkey = "2", label = "专注不消耗" },
   { flag = "no_stamina_consume", hotkey = "3" },
