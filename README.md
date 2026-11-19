@@ -11,7 +11,7 @@
 
 ## 下载
 
-去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.13.0.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
+去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.14.2.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
 
 ## 前置要求
 
@@ -87,7 +87,15 @@ WINEDLLOVERRIDES="dinput8=n,b" %command%
 
 ---
 
-## 中文版本次更新（v1.13.0）
+## 中文版本次更新（v1.14.2）
+
+### v1.14.2（2026-11-19）
+- **全版本偏移表（1.02～2.7.2）**：Boss 列表、Boss 单侧 AI、固定开局招式、游戏速度、开/关地图、副本传送、冻结世界都接入统一版本表；`ChrIns.EntityId`、`PlayerIns`、`ForceAct/LastAct`、`CSFlipperImp.GameSpeed` 按版本取值。
+- **支持程度**：2.7.2（1.17.2）为实机验证；1.02～1.17.1 按 TarnishedTool（MIT）的版本表接入，属于“理论支持”，没有旧版客户端逐版实测。
+- **F3 全地图**：`CSFD4VirtualMemoryFlag` 优先用 `BaseAddresses` 的版本表定位，不再只依赖 2.7.2 的 AOB 特征码；地图界面有缓存，按 F3 后要关掉地图再打开。
+- **2.7.2 角色表保留旧路径**：继续使用 `0x1F1E8/0x1F1F0` 表，避免换成 2048 项密集表后掉帧；附近角色列表加 250ms 缓存。
+- 实验性的检测框范围、树碰撞绘制、绘制探针、EMEVD 天气/时间仍只按 2.7.2 验证，不在全版本承诺内。
+- 版本号 `1.14.2`，发布包 `jdsd_er_practice_tool-v1.14.2.zip`。
 
 ### v1.13.0（2026-11-14）
 - **世界控制（新增）**：主界面「绘制开关」下新增一组「世界控制」，包括战斗开地图、副本内传送、冻结世界、游戏速度。前两项默认开启，注入后自动生效，也可以手动取消；退出工具时全部还原。

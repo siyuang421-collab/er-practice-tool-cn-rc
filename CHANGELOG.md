@@ -2,6 +2,23 @@
 
 本文件记录中文版相对上游 [veeenu/eldenring-practice-tool](https://github.com/veeenu/eldenring-practice-tool) 的改动。
 
+## v1.14.2（2026-11-19 正式版）
+
+### 全版本偏移表（1.02～2.7.2）
+- Boss 列表 / Boss 单侧 AI / 固定开局：`ChrIns.EntityId`、`WorldChrMan->PlayerIns`、角色表 begin/end、`AiThink.ForceAct / LastAct` 改为按版本取值。
+- 世界控制：战斗开地图、关闭地图、副本内传送、冻结世界的固定地址改为按版本取 RVA；AOB 仍然优先。
+- 游戏速度：`CSFlipperImp` 基址改用 `BaseAddresses.cs_flipper`，实例内偏移按版本取 `0x2D4` 或 `0x2CC`。
+- 2.7.2 角色表保留原来实机跑通的 `0x1F1E8/0x1F1F0`，并给附近角色列表加 250ms 缓存，避免掉帧。
+- F3 的 `CSFD4VirtualMemoryFlag` 优先走 `BaseAddresses` 版本表，旧版不再只依赖 2.7.2 特征码。
+
+### 支持程度
+- 2.7.2（1.17.2）实机验证。
+- 1.02～1.17.1 按 TarnishedTool（MIT）版本表接入，未逐版实机，属于“理论支持”。
+- 检测框范围、树碰撞绘制、绘制探针、EMEVD 天气/时间仍只按 2.7.2 验证。
+
+### 打包
+- 版本号 `1.14.2`，发布包 `jdsd_er_practice_tool-v1.14.2.zip`。
+
 ## v1.13.0（2026-11-14 正式版）
 
 ### 世界控制分组（新增）
