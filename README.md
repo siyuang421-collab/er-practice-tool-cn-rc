@@ -11,7 +11,7 @@
 
 ## 下载
 
-去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.14.2.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
+去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.14.3.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
 
 ## 前置要求
 
@@ -87,7 +87,14 @@ WINEDLLOVERRIDES="dinput8=n,b" %command%
 
 ---
 
-## 中文版本次更新（v1.14.2）
+## 中文版本次更新（v1.14.3）
+
+### v1.14.3（2026-11-19）
+- **液态玻璃主题 v2**：参考「固定开局招式」的半透明面板，把主界面从近白奶灰改成中性偏冷的烟灰玻璃，透出游戏场景但不再发白、也不做成纯黑。
+- **玻璃边缘**：面板增加白色薄雾层、顶部 1px 高光、底部内阴影、外圈 1px 亮边和内侧 1px 冷色折射边；按钮同步加 1px 亮边。
+- **文字对比度**：液态玻璃主题的文字改为浅色，暗底上仍然清楚。
+- **仍是 ImGui 叠层**：不能对游戏背景做真正的高斯模糊，模糊感来自磨砂叠层，不是背景采样。
+- 版本号 `1.14.3`，发布包 `jdsd_er_practice_tool-v1.14.3.zip`。
 
 ### v1.14.2（2026-11-19）
 - **全版本偏移表（1.02～2.7.2）**：Boss 列表、Boss 单侧 AI、固定开局招式、游戏速度、开/关地图、副本传送、冻结世界都接入统一版本表；`ChrIns.EntityId`、`PlayerIns`、`ForceAct/LastAct`、`CSFlipperImp.GameSpeed` 按版本取值。
