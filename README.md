@@ -11,7 +11,7 @@
 
 ## 下载
 
-去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.14.3.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
+去 [Releases](https://github.com/siyuang421-collab/er-practice-tool-cn-rc/releases/latest) 下载最新的 `jdsd_er_practice_tool-v1.14.4.zip`（之后的新版本文件名形如 `jdsd_er_practice_tool-vX.X.X.zip`），解压后按下面步骤跑。
 
 ## 前置要求
 
@@ -87,7 +87,12 @@ WINEDLLOVERRIDES="dinput8=n,b" %command%
 
 ---
 
-## 中文版本次更新（v1.14.3）
+## 中文版本次更新（v1.14.4）
+
+### v1.14.4（2026-11-25）
+- **修复“已是最新仍弹更新”**：程序内嵌版本号此前还停在 `1.13.0`，GitHub 最新 Release 是 1.14.x，更新检查因此每次启动都判定有新版。
+- 本次把工程版本号改为 `1.14.4` 并重新编译；本机版本与最新 Release 一致后，启动不再弹更新提示。
+- 功能与 v1.14.3 相同：烟灰半透明液态玻璃、1px 亮边/折射、全版本偏移表。
 
 ### v1.14.3（2026-11-19）
 - **液态玻璃主题 v2**：参考「固定开局招式」的半透明面板，把主界面从近白奶灰改成中性偏冷的烟灰玻璃，透出游戏场景但不再发白、也不做成纯黑。
